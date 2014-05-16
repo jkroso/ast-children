@@ -1,0 +1,9 @@
+{
+	"name": "ast-children",
+	"repo": "jkroso/ast-children",
+	"description": "get the children of an AST node",
+	"keywords": ["ast", "children"],
+	"dependencies": {},
+	"scripts": ["index.js"],
+	"license": "MIT"
+}

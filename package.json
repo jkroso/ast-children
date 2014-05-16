@@ -1,0 +1,23 @@
+{
+  "name": "ast-children",
+  "version": "0.1.0",
+  "description": "get the children of an AST node",
+  "keywords": ["ast", "children"],
+  "dependencies": {},
+  "devDependencies": {
+    "assert": "component/assert",
+    "serve": "jkroso/serve",
+    "match": "jkroso/match",
+    "hydro-bdd": "*",
+    "hydro-html": "*",
+    "hydro-dot": "*",
+    "esprima": "*",
+    "hydro": "*",
+    "jsmd": "*"
+  },
+  "repository": "git://github.com/jkroso/ast-children.git",
+  "bugs": "https://github.com/jkroso/ast-children/issues",
+  "author": "Jake Rosoman",
+  "files": ["index.js"],
+  "license": "MIT"
+}
