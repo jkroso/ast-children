@@ -18,7 +18,7 @@ children.BlockStatement =
 children.Program = get('body')
 
 children.VariableDeclarator = function(node){
-  return node.init || []
+  return node.init ? [node.init] : []
 }
 
 children.ExpressionStatement = function(node){

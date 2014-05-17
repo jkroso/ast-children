@@ -41,5 +41,5 @@ var ast = {
 }
 children(ast) // => ast.body
 children(ast.body[0]) // => ast.body[0].declarations
-children(ast.body[0].declarations[0]) // => ast.body[0].declarations[0].init
+children(ast.body[0].declarations[0]) // => [ast.body[0].declarations[0].init]
 ```
