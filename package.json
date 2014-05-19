@@ -5,7 +5,7 @@
   "keywords": ["ast", "children"],
   "dependencies": {},
   "devDependencies": {
-    "assert": "component/assert",
+    "assert": "jkroso/assert",
     "serve": "jkroso/serve",
     "match": "jkroso/match",
     "hydro-bdd": "*",

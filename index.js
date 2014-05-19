@@ -18,7 +18,7 @@ children.BlockStatement =
 children.Program = get('body')
 
 children.VariableDeclarator = function(node){
-  return node.init ? [node.init] : []
+  return node.init ? [node.id, node.init] : [node.id]
 }
 
 children.ExpressionStatement = function(node){
@@ -27,7 +27,9 @@ children.ExpressionStatement = function(node){
 
 children.FunctionExpression =
 children.FunctionDeclaration = function(node){
-  return [node.body]
+  return node.id
+    ? node.params.concat(node.id, node.body)
+    : node.params.concat(node.body)
 }
 
 children.IfStatement =
@@ -62,6 +64,10 @@ children.TryStatement = function(node){
   if (node.handlers) out.push.apply(out, node.handlers)
   if (node.finalizer) out.push(node.finalizer)
   return out
+}
+
+children.CatchClause = function(node){
+  return [node.param, node.body]
 }
 
 children.WhileStatement =

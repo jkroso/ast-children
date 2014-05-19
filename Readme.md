@@ -28,12 +28,16 @@ var ast = {
   type: 'Program',
   body: [
     {
-      type: 'VariableDeclaration', 
+      type: 'VariableDeclaration',
       declarations: [
         {
-          type: 'VariableDeclarator', 
+          type: 'VariableDeclarator',
           id: {type: 'Identifier', name: 'a'},
           init: {type: 'Literal', value: 1}
+        },
+        {
+          type: 'VariableDeclarator',
+          id: {type: 'Identifier', name: 'b'}
         }
       ]
     }
@@ -41,5 +45,7 @@ var ast = {
 }
 children(ast) // => ast.body
 children(ast.body[0]) // => ast.body[0].declarations
-children(ast.body[0].declarations[0]) // => [ast.body[0].declarations[0].init]
+var decs = ast.body[0].declarations
+children(decs[0]) // => [decs[0].id, decs[0].init]
+children(decs[1]) // => [decs[1].id]
 ```

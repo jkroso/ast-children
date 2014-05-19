@@ -20,7 +20,7 @@ var tc = body[3]
 var arr = body[4].expression
 
 it('functions', function(){
-  eql(children(fn), [{type:'BlockStatement'}])
+  eql(children(fn), [{name: 'program'}, {type:'BlockStatement'}])
 })
 
 it('arrays', function(){
@@ -32,6 +32,14 @@ it('if', function(){
   eql(children(cond).length, 2)
 })
 
-it('try-catch', function(){
+it('try', function(){
   eql(children(tc), [{type:'BlockStatement'}, {type: 'CatchClause'}])
+})
+
+it('catch', function(){
+  var ctch = tc.handlers[0]
+  eql(children(ctch), [
+    {type: 'Identifier', name: 'e'},
+    {type: 'BlockStatement'}
+  ])
 })
