@@ -104,5 +104,8 @@ children.CallExpression = function(node){
 }
 
 children.MemberExpression = function(node){
+  if (!node.computed)
+    return [node.object];
+
   return [node.object, node.property]
 }
