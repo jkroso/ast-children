@@ -1,6 +1,6 @@
 {
   "name": "ast-children",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "get the children of an AST node",
   "keywords": ["ast", "children"],
   "dependencies": {},
@@ -24,6 +24,6 @@
   },
   "repository": "git://github.com/jkroso/ast-children.git",
   "author": "Jake Rosoman",
-  "files": ["index.js", "built.js"],
+  "files": ["index.js", "keys.json", "built.js"],
   "license": "MIT"
 }
