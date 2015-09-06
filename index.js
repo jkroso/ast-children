@@ -9,7 +9,10 @@ const children = (node) => {
       : out.push(child)
     return out
   }
-  return keys[node.type].reduce(addChild, [])
+  const props = keys[node.type]
+  // non-standard node type
+  if (props === undefined) return []
+  return props.reduce(addChild, [])
 }
 
 export default children
