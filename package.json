@@ -1,6 +1,6 @@
 {
   "name": "ast-children",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "get the children of an AST node",
   "keywords": ["ast", "children"],
   "main": "built.js",
