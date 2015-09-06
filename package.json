@@ -1,6 +1,6 @@
 {
   "name": "ast-children",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "get the children of an AST node",
   "keywords": ["ast", "children"],
   "dependencies": {},
@@ -15,9 +15,15 @@
     "hydro": "*",
     "jsmd": "*"
   },
+  "transpile": [
+    ["*/index.js", "!sourcegraph/babel->js"],
+    ["*/keys.json", "!sourcegraph/json->js"]
+  ],
+  "scripts": {
+    "prepublish": "babel index.js > built.js"
+  },
   "repository": "git://github.com/jkroso/ast-children.git",
-  "bugs": "https://github.com/jkroso/ast-children/issues",
   "author": "Jake Rosoman",
-  "files": ["index.js"],
+  "files": ["index.js", "built.js"],
   "license": "MIT"
 }

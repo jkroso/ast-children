@@ -11,11 +11,6 @@ module.exports = function(hydro) {
     timeout: 500,
     plugins: [
       require('hydro-bdd')
-    ],
-    globals: {
-      assert: require('assert/'),
-      match: require('match'),
-      eql: function(a, b){assert(match(a, b))}
-    }
+    ]
   })
 }

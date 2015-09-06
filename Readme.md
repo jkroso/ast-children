@@ -1,20 +1,15 @@
-
 # ast-children
 
-  get the children of an AST node
+get the children of an AST node
 
 ## Installation
 
-With your favorite package manager:
-
-- [packin](//github.com/jkroso/packin): `packin add ast-children`
-- [component](//github.com/component/component#installing-packages): `component install jkroso/ast-children`
-- [npm](//npmjs.org/doc/cli/npm-install.html): `npm install ast-children`
+`npm install ast-children`
 
 then in your app:
 
 ```js
-var children = require('ast-children')
+const children = require('ast-children')
 ```
 
 ## API
