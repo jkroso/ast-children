@@ -1,6 +1,6 @@
 {
   "name": "ast-children",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "get the children of an AST node",
   "keywords": ["ast", "children"],
   "main": "built.js",
@@ -13,12 +13,11 @@
     "hydro-html": "*",
     "hydro-dot": "*",
     "esprima": "*",
-    "hydro": "*",
-    "jsmd": "*"
+    "hydro": "*"
   },
   "transpile": [
-    ["*/index.js", "!sourcegraph/babel->js"],
-    ["*/keys.json", "!sourcegraph/json->js"]
+    ["index.js", "!sourcegraph/babel->js"],
+    ["keys.json", "!sourcegraph/json->js"]
   ],
   "scripts": {
     "prepublish": "babel index.js > built.js"
